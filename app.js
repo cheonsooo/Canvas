@@ -1,6 +1,9 @@
 const canvas =document.getElementById("jsCanvas");
 const ctx=canvas.getContext("2d");
 
+canvas.width=700;
+canvas.height=700;
+
 ctx.strokeStyle="#black";
 ctx.lineWidth=2.5;
 
@@ -18,7 +21,7 @@ function startPainting(){
 function onMouseMove(event){
     const x=event.offsetX;
     const y=event.offsetY;
-    if(!paintng){
+    if(!painting){
         ctx.beginPath()
         ctx.moveTo(x,y);
     } else{
